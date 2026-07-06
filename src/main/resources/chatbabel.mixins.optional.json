@@ -1,0 +1,13 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "me.verschillend.chatbabel.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "ScoreboardObjectiveMixin",
+    "BossBarNameMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

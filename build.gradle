@@ -1,0 +1,71 @@
+plugins {
+    id 'fabric-loom' version '1.13-SNAPSHOT'
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    // Loom adds the Fabric/Mojang/Minecraft libraries maven repos automatically.
+    maven {
+        name = "Shedaniel (Cloth Config)"
+        url = "https://maven.shedaniel.me/"
+    }
+    maven {
+        name = "TerraformersMC (Mod Menu)"
+        url = "https://maven.terraformersmc.com/releases/"
+    }
+}
+
+dependencies {
+    // To change the versions see the gradle.properties file
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+    // Fabric API
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    // Cloth Config API - also brings in the AutoConfig classes (me.shedaniel.autoconfig.*)
+    // used to build the in-game config screen from ChatBabelConfig.
+    modImplementation("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
+        exclude group: "net.fabricmc.fabric-api"
+    }
+    // Bundle Cloth Config inside our jar so players don't need to install it separately.
+    include "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}"
+
+    // Mod Menu integration is optional: compileOnly means it is NOT required at runtime.
+    // If the player has Mod Menu installed, our ModMenuIntegration entrypoint gets used.
+    // If not, the class is simply never loaded and everything still works via the keybind/command.
+    modCompileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
+}
+
+processResources {
+    inputs.property "version", project.version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.encoding = "UTF-8"
+    it.options.release = 21
+}
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+jar {
+    from("LICENSE") {
+        rename { "${it}_${project.base.archivesName.get()}" }
+    }
+}

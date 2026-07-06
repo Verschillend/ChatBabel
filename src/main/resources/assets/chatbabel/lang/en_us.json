@@ -1,0 +1,118 @@
+{
+  "key.chatbabel.openconfig": "Open ChatBabel Config",
+  "key.chatbabel.opentranslator": "Open ChatBabel Translator",
+  "key.category.chatbabel.main": "ChatBabel",
+
+  "text.autoconfig.chatbabel.title": "ChatBabel Settings",
+
+  "text.autoconfig.chatbabel.category.general": "General",
+  "text.autoconfig.chatbabel.category.chat": "Chat Translation",
+  "text.autoconfig.chatbabel.category.hud": "HUD Translation",
+
+  "text.autoconfig.chatbabel.option.modEnabled": "Enable ChatBabel",
+  "text.autoconfig.chatbabel.option.modEnabled.@Tooltip": "Master switch. Turn off to disable every feature of this mod without uninstalling it.",
+
+  "text.autoconfig.chatbabel.option.nativeLanguage": "Native Language",
+  "text.autoconfig.chatbabel.option.nativeLanguage.@Tooltip": "The language everything gets translated INTO.",
+
+  "text.autoconfig.chatbabel.option.displayMode": "Display Mode",
+  "text.autoconfig.chatbabel.option.displayMode.@Tooltip": "Show Translated (hover for original): the chat line shows the translated text, hover it to see what was actually typed.\nShow Original (hover for translated): the chat line shows exactly what was typed, hover it to see the translation.",
+
+  "text.autoconfig.chatbabel.option.translationProvider": "Translation Provider",
+  "text.autoconfig.chatbabel.option.translationProvider.@Tooltip": "Which free translation backend to use. Google (unofficial) needs no key/account and works out of the box. LibreTranslate is open-source but the public instance is rate-limited; self-hosting is recommended if you pick it.",
+
+  "text.autoconfig.chatbabel.option.libreTranslateUrl": "LibreTranslate URL",
+  "text.autoconfig.chatbabel.option.libreTranslateUrl.@Tooltip": "Only used when Translation Provider is set to LibreTranslate. Point this at your own self-hosted instance for reliable, unlimited, key-free translation.",
+
+  "text.autoconfig.chatbabel.option.showSourceLanguageOnHover": "Show Source Language on Hover",
+  "text.autoconfig.chatbabel.option.showSourceLanguageOnHover.@Tooltip": "Adds a second line to the hover tooltip naming the language the message was detected/translated from.",
+
+  "text.autoconfig.chatbabel.option.translateChatMessages": "Translate Chat Messages",
+  "text.autoconfig.chatbabel.option.translateChatMessages.@Tooltip": "Automatically detect the language of incoming chat messages and translate them to your native language.",
+
+  "text.autoconfig.chatbabel.option.expandAcronyms": "Expand Chat Acronyms",
+  "text.autoconfig.chatbabel.option.expandAcronyms.@Tooltip": "Expands common chat slang/acronyms (rn, wdym, smth, idk, brb, ...) into full words before translating, so the translator understands them correctly.",
+
+  "text.autoconfig.chatbabel.option.detectPlayerUsernames": "Detect Player Usernames",
+  "text.autoconfig.chatbabel.option.detectPlayerUsernames.@Tooltip": "Compares words in chat against the current online player list so a username that happens to be a real word in another language (e.g. 'Hola') isn't mistaken for a sentence and mistranslated.",
+
+  "text.autoconfig.chatbabel.option.caesarCipherDecoding": "Decode Caesar Cipher Text",
+  "text.autoconfig.chatbabel.option.caesarCipherDecoding.@Tooltip": "Attempts to detect and decode simple Caesar-shift (ROT-N) ciphered chat messages before translating/displaying them.",
+
+  "text.autoconfig.chatbabel.option.revealObfuscatedText": "Reveal Obfuscated Text on Hover",
+  "text.autoconfig.chatbabel.option.revealObfuscatedText.@Tooltip": "For same-language messages containing magic/obfuscated (matrix-style scrambling) formatting, hovering over the scrambled text shows what it actually says.",
+
+  "text.autoconfig.chatbabel.option.ignoredLanguages": "Ignored Source Languages",
+  "text.autoconfig.chatbabel.option.ignoredLanguages.@Tooltip":  "Languages that should NEVER be translated (type the exact name shown in the Native Language dropdown, e.g. GERMAN, FRENCH). Leave empty to translate everything.",
+
+  "text.autoconfig.chatbabel.option.translateScoreboard": "Translate Scoreboard",
+  "text.autoconfig.chatbabel.option.translateScoreboard.@Tooltip": "Translates the sidebar scoreboard's title. Direct translation only (no hover, matches how the HUD renders).",
+
+  "text.autoconfig.chatbabel.option.translateBossBar": "Translate Boss Bar",
+  "text.autoconfig.chatbabel.option.translateBossBar.@Tooltip": "Translates boss bar names. Direct translation only (no hover).",
+
+  "text.autoconfig.chatbabel.option.translateTitle": "Translate Title",
+  "text.autoconfig.chatbabel.option.translateTitle.@Tooltip": "Translates the big title text shown in the center of the screen. Direct translation only (no hover).",
+
+  "text.autoconfig.chatbabel.option.translateSubtitle": "Translate Subtitle",
+  "text.autoconfig.chatbabel.option.translateSubtitle.@Tooltip": "Translates the subtitle text shown below titles. Direct translation only (no hover).",
+
+  "text.autoconfig.chatbabel.option.translateActionBar": "Translate Action Bar",
+  "text.autoconfig.chatbabel.option.translateActionBar.@Tooltip": "Translates the action bar text shown above the hotbar. Direct translation only (no hover).",
+
+  "text.autoconfig.chatbabel.option.displayMode.SHOW_TRANSLATED_HOVER_ORIGINAL": "Show Translated (hover for original)",
+  "text.autoconfig.chatbabel.option.displayMode.SHOW_ORIGINAL_HOVER_TRANSLATED": "Show Original (hover for translated)",
+
+  "text.autoconfig.chatbabel.option.translationProvider.GOOGLE_UNOFFICIAL": "Google Translate (unofficial, free)",
+  "text.autoconfig.chatbabel.option.translationProvider.LIBRETRANSLATE": "LibreTranslate (open-source, free)",
+
+  "text.autoconfig.chatbabel.option.nativeLanguage.ENGLISH": "English",
+  "text.autoconfig.chatbabel.option.nativeLanguage.SPANISH": "Spanish",
+  "text.autoconfig.chatbabel.option.nativeLanguage.FRENCH": "French",
+  "text.autoconfig.chatbabel.option.nativeLanguage.GERMAN": "German",
+  "text.autoconfig.chatbabel.option.nativeLanguage.ITALIAN": "Italian",
+  "text.autoconfig.chatbabel.option.nativeLanguage.PORTUGUESE": "Portuguese",
+  "text.autoconfig.chatbabel.option.nativeLanguage.DUTCH": "Dutch",
+  "text.autoconfig.chatbabel.option.nativeLanguage.RUSSIAN": "Russian",
+  "text.autoconfig.chatbabel.option.nativeLanguage.UKRAINIAN": "Ukrainian",
+  "text.autoconfig.chatbabel.option.nativeLanguage.POLISH": "Polish",
+  "text.autoconfig.chatbabel.option.nativeLanguage.CZECH": "Czech",
+  "text.autoconfig.chatbabel.option.nativeLanguage.SLOVAK": "Slovak",
+  "text.autoconfig.chatbabel.option.nativeLanguage.SLOVENIAN": "Slovenian",
+  "text.autoconfig.chatbabel.option.nativeLanguage.CROATIAN": "Croatian",
+  "text.autoconfig.chatbabel.option.nativeLanguage.SERBIAN": "Serbian",
+  "text.autoconfig.chatbabel.option.nativeLanguage.BULGARIAN": "Bulgarian",
+  "text.autoconfig.chatbabel.option.nativeLanguage.ROMANIAN": "Romanian",
+  "text.autoconfig.chatbabel.option.nativeLanguage.HUNGARIAN": "Hungarian",
+  "text.autoconfig.chatbabel.option.nativeLanguage.GREEK": "Greek",
+  "text.autoconfig.chatbabel.option.nativeLanguage.TURKISH": "Turkish",
+  "text.autoconfig.chatbabel.option.nativeLanguage.SWEDISH": "Swedish",
+  "text.autoconfig.chatbabel.option.nativeLanguage.NORWEGIAN": "Norwegian",
+  "text.autoconfig.chatbabel.option.nativeLanguage.DANISH": "Danish",
+  "text.autoconfig.chatbabel.option.nativeLanguage.FINNISH": "Finnish",
+  "text.autoconfig.chatbabel.option.nativeLanguage.ICELANDIC": "Icelandic",
+  "text.autoconfig.chatbabel.option.nativeLanguage.IRISH": "Irish",
+  "text.autoconfig.chatbabel.option.nativeLanguage.WELSH": "Welsh",
+  "text.autoconfig.chatbabel.option.nativeLanguage.CATALAN": "Catalan",
+  "text.autoconfig.chatbabel.option.nativeLanguage.ESTONIAN": "Estonian",
+  "text.autoconfig.chatbabel.option.nativeLanguage.LATVIAN": "Latvian",
+  "text.autoconfig.chatbabel.option.nativeLanguage.LITHUANIAN": "Lithuanian",
+  "text.autoconfig.chatbabel.option.nativeLanguage.ARABIC": "Arabic",
+  "text.autoconfig.chatbabel.option.nativeLanguage.HEBREW": "Hebrew",
+  "text.autoconfig.chatbabel.option.nativeLanguage.PERSIAN": "Persian",
+  "text.autoconfig.chatbabel.option.nativeLanguage.HINDI": "Hindi",
+  "text.autoconfig.chatbabel.option.nativeLanguage.BENGALI": "Bengali",
+  "text.autoconfig.chatbabel.option.nativeLanguage.URDU": "Urdu",
+  "text.autoconfig.chatbabel.option.nativeLanguage.THAI": "Thai",
+  "text.autoconfig.chatbabel.option.nativeLanguage.VIETNAMESE": "Vietnamese",
+  "text.autoconfig.chatbabel.option.nativeLanguage.INDONESIAN": "Indonesian",
+  "text.autoconfig.chatbabel.option.nativeLanguage.MALAY": "Malay",
+  "text.autoconfig.chatbabel.option.nativeLanguage.JAPANESE": "Japanese",
+  "text.autoconfig.chatbabel.option.nativeLanguage.KOREAN": "Korean",
+  "text.autoconfig.chatbabel.option.nativeLanguage.CHINESE_SIMPLIFIED": "Chinese (Simplified)",
+  "text.autoconfig.chatbabel.option.nativeLanguage.CHINESE_TRADITIONAL": "Chinese (Traditional)",
+  "text.autoconfig.chatbabel.option.nativeLanguage.SWAHILI": "Swahili",
+  "text.autoconfig.chatbabel.option.nativeLanguage.AFRIKAANS": "Afrikaans",
+  "text.autoconfig.chatbabel.option.nativeLanguage.ESPERANTO": "Esperanto",
+  "text.autoconfig.chatbabel.option.nativeLanguage.LATIN": "Latin"
+}
