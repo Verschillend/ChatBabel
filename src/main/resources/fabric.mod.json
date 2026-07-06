@@ -14,6 +14,7 @@
     "donate": "https://patreon.com/Verschillend?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink"
   },
   "license": "Vers (see LICENSE.txt in the mod/JAR)",
+  "icon": "assets/chatbabel/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
