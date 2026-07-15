@@ -11,6 +11,7 @@ import me.verschillend.chatbabel.translation.TranslationCache;
 import me.verschillend.chatbabel.translation.TranslationException;
 import me.verschillend.chatbabel.translation.TranslationResult;
 import me.verschillend.chatbabel.translation.TranslationService;
+import me.verschillend.chatbabel.pipeline.NeverTranslateMatcher;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.HoverEvent;
 import net.minecraft.text.MutableText;
@@ -46,9 +47,11 @@ public class ChatMessageProcessor {
             return original;
         }
 
-        Text afterTranslation = (config.translateChatMessages && !isVanillaSystemMessage(original))
-                ? runTranslationPipeline(original, config)
-                : original;
+        if (NeverTranslateMatcher.matches(original.getString(), config.neverTranslateIfEndsWith)) {
+            return original;
+        }
+
+        Text afterTranslation = config.translateChatMessages ? runTranslationPipeline(original, config) : original;
 
         afterTranslation = config.translateChatMessages ? runTranslationPipeline(original, config) : original;
 

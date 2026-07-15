@@ -66,6 +66,10 @@ public class ChatBabelConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public List<String> ignoredLanguages = new ArrayList<>();
 
+    @ConfigEntry.Category("chat")
+    @ConfigEntry.Gui.Tooltip
+    public List<String> neverTranslateIfEndsWith = new ArrayList<>();
+
     // ----------------------------------------------------------------
     // HUD (scoreboard / boss bar / title / subtitle / action bar)
     // Each is direct-translation only, no hover, by design (matches the spec).

@@ -29,8 +29,8 @@ public class ChatBabelClient implements ClientModInitializer {
         ChatBabelConfigHolder.init();
 
         ClientReceiveMessageEvents.ALLOW_CHAT.register((message, signedMessage, sender, params, receptionTimestamp) -> {
-            processor.processAsync(message, decorated ->
-                    MinecraftClient.getInstance().inGameHud.getChatHud().addMessage(params.applyChatDecoration(decorated)));
+            processor.processAsync(message, processed ->
+                    MinecraftClient.getInstance().inGameHud.getChatHud().addMessage(processed));
             return false;
         });
 

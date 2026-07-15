@@ -66,6 +66,9 @@
   "text.autoconfig.chatbabel.option.translationProvider.GOOGLE_UNOFFICIAL": "Google Translate (unofficial, free)",
   "text.autoconfig.chatbabel.option.translationProvider.LIBRETRANSLATE": "LibreTranslate (open-source, free)",
 
+  "text.autoconfig.chatbabel.option.neverTranslateIfEndsWith": "Never Translate If Message Ends With",
+  "text.autoconfig.chatbabel.option.neverTranslateIfEndsWith.@Tooltip": "Chat lines ending in any of these are never translated. Color codes like &6 are stripped before comparing, so they work whether the server sends real formatting or literal &-codes as text. Example: '&6joined the lobby.' skips Hypixel-style join broadcasts.",
+
   "text.autoconfig.chatbabel.option.nativeLanguage.ENGLISH": "English",
   "text.autoconfig.chatbabel.option.nativeLanguage.SPANISH": "Spanish",
   "text.autoconfig.chatbabel.option.nativeLanguage.FRENCH": "French",
